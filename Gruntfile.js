@@ -27,7 +27,7 @@ module.exports = function (grunt) {
         uglify: {
             bower_js_files: {
                 files: {
-                    'build/js/bh.min.js': ['node_modules/jquery/dist/jquery.js' ]
+                    'build/js/bh.min.js': ['node_modules/jquery/dist/jquery.js', 'js/bh-main.js' ]
                 }
             }
         },
