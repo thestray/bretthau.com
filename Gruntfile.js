@@ -24,6 +24,13 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        uglify: {
+            bower_js_files: {
+                files: {
+                    'build/js/bh.min.js': ['node_modules/jquery/dist/jquery.js' ]
+                }
+            }
+        },
         watch: {
             jade: {
                 files: ['*.jade'],
@@ -36,7 +43,8 @@ module.exports = function (grunt) {
     // Load grunt plugins
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-jade');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.registerTask('default', ['stylus', 'jade']);
+    grunt.registerTask('default', ['stylus', 'jade', 'uglify']);
 
 };
