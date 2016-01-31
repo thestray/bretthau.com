@@ -1,0 +1,22 @@
+{
+  "name": "bretthau.com",
+  "version": "1.0.0",
+  "description": "Personal website / portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thestray/bretthau.com.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Brett Hau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thestray/bretthau.com/issues"
+  },
+  "homepage": "https://github.com/thestray/bretthau.com#readme"
+}
