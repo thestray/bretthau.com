@@ -9,16 +9,39 @@ html(lang="en")
     script(src="js/bh.min.js")
   body
     .nav-panel
+        nav
+            ul
+                li.nav-btn.nav-page1.active(data-target='1') Page One
+                li.nav-btn.nav-page2(data-target='2') Page Two
+                li.nav-btn.nav-page3(data-target='3') Page Three
+                li.nav-btn.nav-page4(data-target='4') Page Four
+                li.nav-btn.nav-page5(data-target='5') Page Five
 
     .scene
         .page.page-1.active
-
+            h2.heading
+             | Looking for a Frontend Dev?
+             br
+             | One who knows Jade
+             span#cursor |
+             | ?
         .page.page-2
+            .half.left.withText
+
+            .half.right
 
         .page.page-3
+            .half.left
 
+            .half.right.withText
         .page.page-4
+            .half.left.withText
+
+            .half.right
 
         .page.page-5
+            .half.left
+
+            .half.right.withText
 
 

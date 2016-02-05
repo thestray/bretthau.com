@@ -1,8 +1,139 @@
 //out: ../build/css/bh.css, compress: false, sourcemap: false
 
-body
-  background-color #000
-  padding 1%
-  color #ccc
-  font-family "Helvetica Neue", Helvetica, Arial, sans-serif
-  font-size 1em
+*, *:before, *:after
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+html, body
+  height: 100%
+  overflow: hidden
+  background: #000
+
+.scene
+  position: relative
+  width: 100%
+  height: 100%
+  background-color: #333
+
+.nav-panel
+  position: relative
+  text-align: center
+  transition: opacity 0.5s, transform 0.5s cubic-bezier(0.57, 1.2, 0.68, 2.6)
+  will-change: transform, opacity
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 15px
+    overflow: hidden
+    background-color: #333
+    .nav-btn
+      color: white
+      &.active
+        color: yellow
+      &:hover
+        color: yellow
+        background-color: #fff
+        transform: scale(1.2)
+    li
+      text-align: center
+      display: inline
+      color: white
+      padding: 15px
+      text-decoration: none
+
+.page
+  z-index: 2
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  transition: transform .7s, opacity .7s, z-index .7s
+  will-change: transform, opacity
+  &:nth-child(1)
+    background-image: url("https://images.unsplash.com/photo-1454165205744-3b78555e5572?crop=entropy&fit=crop&fm=jpg&h=950&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1700")
+    background-position: center
+    background-color: #bac6d1
+  &:nth-child(2)
+    .left
+      background-color: #bf9b65
+    .right
+      background-image: url("https://images.unsplash.com/photo-1452601395039-3184bc03cb09?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=5e02bfd262d6b6090294ea2cb2b660c9")
+      background-position: center
+  &:nth-child(3)
+    .left
+      background-image: url("https://images.unsplash.com/photo-1453475250267-163ff185e88e?crop=entropy&fit=crop&fm=jpg&h=900&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1525")
+      background-position: center
+    .right
+      background-color: #b58b8d
+  &:nth-child(4)
+    .left
+      background-color: #c7987b
+    .right
+      background-image: url("https://images.unsplash.com/photo-1416339306562-f3d12fefd36f?crop=entropy&fit=crop&fm=jpg&h=900&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1525")
+      background-position: center
+  &:nth-child(5)
+    .left
+      background-image: url("https://images.unsplash.com/photo-1421757381940-5d269570b21c?crop=entropy&fit=crop&fm=jpg&h=900&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1525")
+      background-position: center
+    .right
+      background-color: #b58b8d
+  &.active
+    z-index: 5
+    transition: transform .7s, opacity .7s, z-index 0s .7s
+    .half
+      transform: translateX(0) !important
+      transition: transform .7s ease-out
+  &.previous
+    opacity: 0.4 !important
+    visibility: visible !important
+    transition: transform .7s, opacity .7s, z-index 0s
+  &.small
+    transform: scale(0.8)
+    opacity: 0
+    visibility: hidden
+    .half
+      transform: translateX(0) !important
+  for $i in (2)..(10)
+    &:nth-child({$i})
+      .left
+        transform: translateX(-100%)
+      .right
+        transform: translateX(100%)
+
+.half
+  position: absolute
+  top: 0
+  width: 50%
+  height: 100%
+  background-size: cover
+  transition: transform .7s ease-in
+  will-change: transform
+  &.left
+    left: 0
+  &.right
+    left: 50%
+  &.withText:after
+    content: ""
+    position: absolute
+    display: block
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.5)
+    z-index: 10
+
+.heading
+  position: relative
+  z-index: 500
+  top: 40%
+  //left: 50%
+  //transform: translateX(-50%) translateY(-50%)
+  font-size: 5.5rem
+  color: #fff
+  text-align: center
+
+
+
