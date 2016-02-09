@@ -3,9 +3,7 @@ $(document).ready(function() {
   var pages = $(".page").length,
       scrolling = false,
       curPage = 1;
-  if(curPage == 1){
-    setInterval('cursorAnimation()', 600);
-  }
+
   // Main function to change page
   function pagination(page, movingUp) {
     scrolling = true;
@@ -87,15 +85,4 @@ $(document).ready(function() {
     pagination(+$(this).attr("data-target"));
   });
 
-
-
 });
-
-function cursorAnimation() {
-  $('#cursor').animate({
-    opacity: 0
-  }, 'fast', 'swing').animate({
-    opacity: 1
-  }, 'fast', 'swing');
-}
-

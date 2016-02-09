@@ -158,7 +158,107 @@ html, body
   padding: 40px
   font-size: 1rem
 
+button
+  position: relative
+  height: 45px
+  width: 150px
+  margin: 10px 7px
+  padding: 5px 5px
+  font-weight: 700
+  font-size: 15px
+  letter-spacing 2px
+  text-transform: uppercase
+  outline: 0;
+  overflow:hidden
+  background: none
+  z-index: 1
+  cursor: pointer
+  transition: ease-in 0.08s
 
+  &.fill_1
+    color:  color5
+    border: 2px color5 solid
+    border-radius: 4px
 
+  &.fill_1:hover
+    color: color2
 
+  &.fill_1:before
+    content: ''
+    position: absolute
+    background: color5
+    bottom: 0
+    left: 0
+    right: 0
+    top: 100%
+    z-index: -1
+    transition: top ease-in 0.09s
 
+  &.fill_1:hover:before
+    top: 0
+
+  &.fill_2
+    color:  color5
+    border: 2px color5 solid
+    border-radius: 4px
+
+  &.fill_2:hover
+    color: color3
+
+  &.fill_2:before
+    content: ''
+    position: absolute
+    background: color5
+    bottom: 0
+    left: 0
+    right: 0
+    top: 100%
+    z-index: -1
+    transition: top ease-in 0.09s
+
+  &.fill_2:hover:before
+    top: 0
+
+  &.fill_3
+    color:  color1
+    border: 2px color1 solid
+    border-radius: 4px
+
+  &.fill_3:hover
+    color: color4
+
+  &.fill_3:before
+    content: ''
+    position: absolute
+    background: color1
+    bottom: 0
+    left: 0
+    right: 0
+    top: 100%
+    z-index: -1
+    transition: top ease-in 0.09s
+
+  &.fill_3:hover:before
+    top: 0
+
+  &.fill_4
+    color:  color1
+    border: 2px color1 solid
+    border-radius: 4px
+
+  &.fill_4:hover
+    color: color5
+
+  &.fill_4:before
+    content: ''
+    position: absolute
+    background: color1
+    bottom: 0
+    left: 0
+    right: 0
+    top: 100%
+    z-index: -1
+    transition: top ease-in 0.09s
+
+  &.fill_4:hover:before
+    top: 0
