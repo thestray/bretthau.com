@@ -1,14 +1,16 @@
 doctype html
 html(lang="en")
   head
+    // So you decided to take a look under the hood? Thats okay. This site was written with Jade, Stylus and a little JQuery and Javascript. You can check out the full code at https://github.com/thestray/bretthau.com
     meta(http-equiv="content-type", content="text/html; charset=UTF-8")
-    meta(name="description", content="")
-    meta(name="keywords", content="")
+    meta(name="description", content="I'm a front-end Developer. I love design, but have always been better at coding. This is my personal portfolio site")
+    meta(name="keywords", content="Frontend, front-end, front end, dev, developer, web developer, designer, web designer, web development, html, css, full stack, javascript, framework, html5, css3")
     title Hi, I'm Brett
     link(rel="stylesheet", href="css/bh.css")
     link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
     script(src="js/bh.min.js")
   body
+    // Navigation pannel. At top of page.
     .nav-panel
         nav
             ul
@@ -17,8 +19,9 @@ html(lang="en")
                 li.nav-btn.nav-page3(data-target='3') Work
                 li.nav-btn.nav-page4(data-target='4') Blog
                 li.nav-btn.nav-page5(data-target='5') Contact
-
+    // Content area
     .scene
+        // Page one. Full with with heading
         .page.page-1.active
             h1.heading
                 | Hi, I'm Brett
@@ -26,7 +29,7 @@ html(lang="en")
                 | Are you looking for a Developer?
 
 
-
+        // Page two. Left side text. About page.
         .page.page-2
             .half.left.withText
                 .content
@@ -45,6 +48,7 @@ html(lang="en")
 
             .half.right
 
+        // Page three. Right side text. Work page.
         .page.page-3
             .half.left
 
@@ -66,6 +70,7 @@ html(lang="en")
                      a(href='https://dribbble.com/thestray' target='_blank'): i.social_light.fa.fa-dribbble.fa-3x
 
 
+        // Page four. Left side text. Blog page.
         .page.page-4
             .half.left.withText
                 .content
@@ -80,6 +85,7 @@ html(lang="en")
 
             .half.right
 
+        // Page five. Right side text. Contact page.
         .page.page-5
             .half.left
 

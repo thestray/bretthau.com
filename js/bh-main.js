@@ -56,8 +56,6 @@ $(document).ready(function() {
     }
   }
 
-
-
   //Change page on mouse scroll
   $(document).on("mousewheel DOMMouseScroll", function(e) {
     if (!scrolling) {
