@@ -78,7 +78,7 @@ $(document).ready(function() {
   });
 
   // Change page on menu click
-  $(document).on("click", ".nav-btn:not(.active)", function() {
+  $(document).on("click touchstart", ".nav-btn:not(.active)", function() {
     if (scrolling) return;
     pagination(+$(this).attr("data-target"));
   });
