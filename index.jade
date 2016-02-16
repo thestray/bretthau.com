@@ -1,112 +1,27 @@
 doctype html
 html(lang="en")
-  head
-    // So you decided to take a look under the hood? Thats okay. This site was written with Jade, Stylus and a little JQuery and Javascript. You can check out the full code at https://github.com/thestray/bretthau.com
-    meta(http-equiv="content-type", content="text/html; charset=UTF-8")
-    meta(name="description", content="I'm a front-end Developer. I love design, but have always been better at coding. This is my personal portfolio site")
-    meta(name="keywords", content="Frontend, front-end, front end, dev, developer, web developer, designer, web designer, web development, html, css, full stack, javascript, framework, html5, css3")
-    title Hi, I'm Brett
-    link(rel="stylesheet", href="css/bh.css")
-    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
-    script(src="js/bh.min.js")
-
+  // Page head
+  include includes/head.jade
   body
     // Navigation pannel. At top of page.
-    .nav-panel
-        nav
-            ul
-                li.nav-btn.nav-page1.active(data-target='1') Welcome
-                li.nav-btn.nav-page2(data-target='2') About
-                li.nav-btn.nav-page3(data-target='3') Work
-                li.nav-btn.nav-page4(data-target='4') Blog
-                li.nav-btn.nav-page5(data-target='5') Contact
+    include includes/nav.jade
     // Content area
     .scene
-        // Page one. Full with with heading
-        .page.page-1.active
-            h1.heading
-                | Hi, I'm Brett
-                br
-                | Are you looking for a Developer?
-
+        // Page one. Full width with heading
+        include includes/page-1.jade
 
         // Page two. Left side text. About page.
-        .page.page-2
-            .half.left.withText
-                .content
-                    img(src='img/thestray_large.jpg')
-                    h2 Hi there. I'm Brett
-                    br
-                    p.
-                     I'm a front-end Developer. I love design but have always been better at coding. So now I just want to make great designs work.
-                    br
-                    p.
-                     I like to keep it simple and develop what you need to convey the message that you want to send. I know how to create code that will work across devices using the latest technologies available.
-                    br
-                    p.
-                     Perhaps most importantly, I'm a husband and father of one little girl. Building from South Korea with an eye to moving back to Australia.
-
-
-            .half.right
+        include includes/page-2.jade
 
         // Page three. Right side text. Work page.
-        .page.page-3
-            .half.left
-
-            .half.right.withText
-                .content
-                    p.
-                     Alas. It has been a while since I was elbow deep in code. But  you can find my work history on my LinkedIn below.
-                    br
-                    div(align='center')
-                     a(href='https://linkedin.com/in/bretthau' target='_blank'): button(name='linkedin').fill_2 LinkedIn
-                    br
-                    br
-                    p.
-                     If you'd like to see more of my work, feel free to check me out one or all of the following sites.
-                    br
-                    div(align='center')
-                     a(href='https://github.com/thestray' target='_blank'): i.social_light.fa.fa-github.fa-3x
-                     a(href='http://codepen.io/thestray/' target='_blank'): i.social_light.fa.fa-codepen.fa-3x
-                     a(href='https://dribbble.com/thestray' target='_blank'): i.social_light.fa.fa-dribbble.fa-3x
-
+        include includes/page-3.jade
 
         // Page four. Left side text. Blog page.
-        .page.page-4
-            .half.left.withText
-                .content
-                    p.
-                     I don't write as often as I should. but when I do you can find it at my Medium account below. I like to write about design, code, travel and life in general.
-                    br
-                    p.
-                     I have been an Expat living in South Korea for the last 9 or so years, so that gives me a different perspective on life.
-                    br
-                    div(align='center')
-                     a(href='https://medium.com/@bretthau' target='_blank'): button(name='look').fill_3 Look here
-
-            .half.right
+        include includes/page-4.jade
 
         // Page five. Right side text. Contact page.
-        .page.page-5
-            .half.left
+        include includes/page-5.jade
 
-            .half.right.withText
-                .content
-                    h2 Want to talk?
-                    br
-                    p.
-                     Hit me up if you want to talk about your next project or even if you just want to chat.
-                    br
-                    div(align='center')
-                     span &nbsp;
-                     a(href='mailto:brett.hau@gmail.com'):                     button(name='contact').fill_4 Send a message
-                    br
-                    p.
-                     You can also find and follow me on one of these sites if you want to know a little more about me.
-                    div(align='center')
-                     a(href='https://twitter.com/bretthau' target='_blank'): i.social_dark.fa.fa-twitter.fa-2x
-                     a(href='https://www.instagram.com/strayinkorea/' target='_blank'): i.social_dark.fa.fa-instagram.fa-2x
-                     a(href='https://www.facebook.com/thestray' target='_blank'): i.social_dark.fa.fa-facebook.fa-2x
 
 
 
